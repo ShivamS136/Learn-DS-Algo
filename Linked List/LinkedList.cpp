@@ -124,33 +124,40 @@ public:
 			Node* newNode = new Node(val); // Create new node
 			newNode->next = tempPtr->next; // Make new node pointing to next of current node
 			tempPtr->next = newNode; // Make current node pointing to new node
-			length++; // I
+			length++; // Increase length
 		}
 		else{
 			int tempPos = 0;
-			Node* tempFirstPtr=head;
-			Node* tempSecondPtr=head;
+			Node* tempFirstPtr=head; // This will point head
+			Node* tempSecondPtr=head; // This will point node pos times forward than head
+
+			// Update Second pointer to point forward node
 			while(tempPos<0-pos-1 && tempSecondPtr->next!=NULL){
 				tempSecondPtr = tempSecondPtr->next;
 				tempPos++;
 			}
-			bool moved=false;
+
+			bool moved=false; // To check whether we are adding node at beginning
+
+			// Move both pointers until second pointer reaches at the end of list
 			while(tempSecondPtr->next!= NULL){
 				moved=true;
 				tempFirstPtr = tempFirstPtr->next;
 				tempSecondPtr = tempSecondPtr->next;
 			}
-			Node* newNode = new Node(val);
+
+			// Add node
+			Node* newNode = new Node(val); // Create new node
 			
-			if(!moved && tempPos+pos+1<0){
+			if(!moved && tempPos+pos+1<0){ // Node is added at the beginning
 				newNode->next = tempFirstPtr;
 				head = newNode;
 			}
-			else{
+			else{ // Node is added not at the beginnig
 				newNode->next = tempFirstPtr->next;
 				tempFirstPtr->next = newNode;
 			}
-			length++;
+			length++; // Increase length
 		}
 	}
 };
@@ -181,5 +188,6 @@ int main(){
 	cout<<"\nList 3: Initialized without value and added element at end\n";
 	ll3->print();
 	delete ll3;
+	
     return 0;
 }
