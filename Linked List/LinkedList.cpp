@@ -83,7 +83,7 @@ public:
 	 *     List length: <length>
 	 *     index: <i>, data: <data>, next: <next>
 	 */
-	void print(){
+	void printList(){
 		Node *ptr = head;
 		int i=0;
 		cout<<"List Length:"<<length<<"\n";
@@ -128,54 +128,158 @@ public:
 		}
 		else{
 			int tempPos = 0;
-			Node* tempFirstPtr=head; // This will point head
-			Node* tempSecondPtr=head; // This will point node pos times forward than head
+			Node* firstPtr=head; // This will point head
+			Node* secondPtr=head; // This will point node pos times forward than head
 
 			// Update Second pointer to point forward node
-			while(tempPos<0-pos-1 && tempSecondPtr->next!=NULL){
-				tempSecondPtr = tempSecondPtr->next;
+			while(tempPos<0-pos-1 && secondPtr->next!=NULL){
+				secondPtr = secondPtr->next;
 				tempPos++;
 			}
 
 			bool moved=false; // To check whether we are adding node at beginning
 
 			// Move both pointers until second pointer reaches at the end of list
-			while(tempSecondPtr->next!= NULL){
+			while(secondPtr->next!= NULL){
 				moved=true;
-				tempFirstPtr = tempFirstPtr->next;
-				tempSecondPtr = tempSecondPtr->next;
+				firstPtr = firstPtr->next;
+				secondPtr = secondPtr->next;
 			}
 
 			// Add node
 			Node* newNode = new Node(val); // Create new node
 			
 			if(!moved && tempPos+pos+1<0){ // Node is added at the beginning
-				newNode->next = tempFirstPtr;
+				newNode->next = firstPtr;
 				head = newNode;
 			}
 			else{ // Node is added not at the beginnig
-				newNode->next = tempFirstPtr->next;
-				tempFirstPtr->next = newNode;
+				newNode->next = firstPtr->next;
+				firstPtr->next = newNode;
 			}
 			length++; // Increase length
 		}
+	}
+
+	/**
+	 * This method return at desired location as per below logic
+	 *     - At beginning(default): Using pos=0
+	 *     - At any place from the beginning: Using pos>=0
+	 *     - At any place from the end: Using pos<0
+	 *     
+	 * @param    int    pos    Position of node to be added
+	 * @return   int    data at the node
+	 */
+	int getData(int pos=0){
+		int retData;
+		int tempPos=0;
+		if (pos>=0)
+		{
+			Node* tempPtr = head;
+			while(tempPos<pos && tempPtr->next!=NULL){
+				tempPtr=tempPtr->next;
+				tempPos++;
+			}
+			retData = tempPtr->data;
+		}
+		else{
+			Node* firstPtr=head;
+			Node* secondPtr=head;
+			while(tempPos<0-pos-1 && secondPtr->next!=NULL){
+				secondPtr = secondPtr->next;
+				tempPos++;
+			}
+
+			while(secondPtr->next!=NULL){
+				secondPtr=secondPtr->next;
+				firstPtr=firstPtr->next;
+			}
+
+			retData = firstPtr->data;
+		}
+		return retData;
+	}
+
+	/**
+	 * This method removes node at desired location as per below logic
+	 *     - At beginning(default): Using pos=0
+	 *     - At any place from the beginning: Using pos>=0
+	 *     - At any place from the end: Using pos<0
+	 *     
+	 * @param    int    pos    Position of node to be added
+	 * @return   int    data of the removed node
+	 */
+	int removeNode(int pos=0){
+		int retData;
+		if(pos==0){
+			Node* tempNode = head;
+			retData = tempNode->data;
+			head = head->next;
+			delete tempNode;
+		}
+		else if(pos>0){
+			int tempPos = 0;
+			Node* tempPtr=head; // Pointer pointing the node before desired location
+
+			// loop until we reach the desired position or end of the list
+			while(tempPos!=pos-1 && tempPtr!=NULL && tempPtr->next!= NULL){
+				tempPtr = tempPtr->next;
+				tempPos++;
+			}
+
+			Node* tempNode = tempPtr->next;
+			tempPtr->next = tempNode->next;
+			retData = tempNode->data;
+			delete tempNode;
+		}
+		else{
+			Node* firstPtr = head;
+			Node* secondPtr = head;
+			int tempPos=0;
+
+			while(tempPos<0-pos && secondPtr!=NULL && secondPtr->next!=NULL){
+				secondPtr = secondPtr->next;
+				tempPos++;
+			}
+
+			bool moved = false;
+			while(secondPtr->next!=NULL){
+				moved=true;
+				secondPtr=secondPtr->next;
+				firstPtr=firstPtr->next;
+			}
+
+			Node* tempNode;
+
+			if(!moved && tempPos+pos<0){
+				tempNode = head;
+				head = head->next;
+			}
+			else{
+				tempNode = firstPtr->next;
+				firstPtr->next = tempNode->next;
+			}
+			retData = tempNode->data;
+			delete tempNode;
+		}
+		return retData;
 	}
 };
 
 int main(){
 	LinkedList* ll = new LinkedList(2);
 	ll->addNode(5);
-	ll->addNode(3);
 	ll->addNode(1,1);
 	cout<<"\nList 1: Initialized with value\n";
-	ll->print();
+	ll->printList();
 	delete ll;
 
 	int arr[] = {1,2,3,4,6,8};
 	int len = sizeof(arr)/sizeof(arr[0]);
 	LinkedList* ll2 = new LinkedList(arr, len);
+	cout<<"\nRemoved: "<<ll2->removeNode(-2);
 	cout<<"\nList 2: Initialized with array of values\n";
-	ll2->print();
+	ll2->printList();
 	delete ll2;
 
 	LinkedList* ll3 = new LinkedList();
@@ -183,10 +287,12 @@ int main(){
 	ll3->addNode(4);
 	ll3->addNode(5,6);
 	ll3->addNode(1,1);
+	cout<<"\nRemoved: "<<ll3->removeNode(2);
 	ll3->addNode(9,-1);
 	ll3->addNode(12,-10);
 	cout<<"\nList 3: Initialized without value and added element at end\n";
-	ll3->print();
+	ll3->printList();
+	cout<<"\n2nd last ele: "<<ll3->getData(-2);
 	delete ll3;
 	
     return 0;
