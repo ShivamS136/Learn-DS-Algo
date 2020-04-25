@@ -104,7 +104,7 @@ public:
 	 * @param    int    pos    Position of node to be added
 	 */
 	void addNode(int val, int pos=0){
-		if(pos==0){ // At beginning
+		if(pos==0 || head==NULL){ // At beginning
 			Node *newNode = new Node(val); // Create New Node
 			newNode->next = head; // Point this new node to head
 			head = newNode; // Make this new node the head of list
@@ -115,7 +115,7 @@ public:
 			Node* tempPtr=head; // Pointer pointing the node before desired location
 
 			// loop until we reach the desired position or end of the list
-			while(tempPos!=pos-1 && tempPtr!=NULL && tempPtr->next!= NULL){
+			while(tempPos!=pos-1 && tempPtr->next!= NULL){
 				tempPtr = tempPtr->next;
 				tempPos++;
 			}
@@ -173,6 +173,11 @@ public:
 	int getData(int pos=0){
 		int retData;
 		int tempPos=0;
+		if (head==NULL)
+		{
+			return retData;
+		}
+
 		if (pos>=0)
 		{
 			Node* tempPtr = head;
@@ -211,11 +216,16 @@ public:
 	 */
 	int removeNode(int pos=0){
 		int retData;
+		if(head==NULL){
+			return retData;
+		}
+
 		if(pos==0){
 			Node* tempNode = head;
 			retData = tempNode->data;
 			head = head->next;
 			delete tempNode;
+			--length;
 		}
 		else if(pos>0){
 			int tempPos = 0;
@@ -230,6 +240,7 @@ public:
 			Node* tempNode = tempPtr->next;
 			tempPtr->next = tempNode->next;
 			retData = tempNode->data;
+			--length;
 			delete tempNode;
 		}
 		else{
@@ -261,6 +272,7 @@ public:
 			}
 			retData = tempNode->data;
 			delete tempNode;
+			--length;
 		}
 		return retData;
 	}

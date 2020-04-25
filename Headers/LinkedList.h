@@ -46,25 +46,23 @@ public:
 		}
 	}
 	void addNode(int val, int pos=0){
-		if(pos==0){
+		if(pos==0 || head==NULL){
 			Node *newNode = new Node(val); 
 			newNode->next = head; 
-			head = newNode; 
-			length++; 
+			head = newNode;
 		}
 		else if(pos>0){ 
 			int tempPos = 0;
 			Node* tempPtr=head; 
 			
-			while(tempPos!=pos-1 && tempPtr!=NULL && tempPtr->next!= NULL){
+			while(tempPos!=pos-1 && tempPtr->next!= NULL){
 				tempPtr = tempPtr->next;
 				tempPos++;
 			}
 			
 			Node* newNode = new Node(val); 
 			newNode->next = tempPtr->next; 
-			tempPtr->next = newNode; 
-			length++; 
+			tempPtr->next = newNode;
 		}
 		else{
 			int tempPos = 0;
@@ -93,12 +91,16 @@ public:
 				newNode->next = firstPtr->next;
 				firstPtr->next = newNode;
 			}
-			length++; 
 		}
+		++length; 
 	}
 	int getData(int pos=0){
 		int retData;
 		int tempPos=0;
+		if (head==NULL)
+		{
+			return retData;
+		}
 		if (pos>=0)
 		{
 			Node* tempPtr = head;
@@ -126,6 +128,9 @@ public:
 
 	int removeNode(int pos=0){
 		int retData;
+		if(head==NULL){
+			return retData;
+		}
 		if(pos==0){
 			Node* tempNode = head;
 			retData = tempNode->data;
@@ -171,6 +176,7 @@ public:
 			retData = tempNode->data;
 			delete tempNode;
 		}
+		--length;
 		return retData;
 	}
 };
