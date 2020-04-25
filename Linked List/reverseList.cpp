@@ -19,7 +19,7 @@ int main()
 	int arr[] = {1,2,3,4,6,8,10,12,13};
 	int len = sizeof(arr)/sizeof(arr[0]);
 	LinkedList* ll = new LinkedList(arr, len);
-	cout<<"\n\nOriginal List:\n";
+	cout<<"Original List:\n";
 	ll->printList();
 
 	reverseList(ll);
