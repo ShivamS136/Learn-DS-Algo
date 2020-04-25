@@ -125,5 +125,11 @@ There are three ways to do that:
 ## Algorithms:
 
 #### 1. Find middle element of a linked list
-- **File:** [findMiddle.cpp](findMiddle.cpp)
-- **Reference:** [GFG: Find the middle of a given linked list in C and Java (Method 2)](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/) 
+* **File:** [findMiddle.cpp](findMiddle.cpp)
+* **Complexity:** *Time:* O(n/2) = O(n), *Space:* O(1)  
+* **Reference:** [GFG: Find the middle of a given linked list in C and Java (Method 2)](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/) 
+
+#### 2. Reverse a linked list
+* **File:** [reverseList.cpp](reverseList.cpp)
+* **Complexity:** *Time:* O(n), *Space:* O(1)  
+* **Reference:** [GFG: Reverse a linked list (Iterative Method)](https://www.geeksforgeeks.org/reverse-a-linked-list/) 
