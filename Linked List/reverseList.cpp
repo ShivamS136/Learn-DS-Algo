@@ -18,13 +18,14 @@ int main()
 {
 	int arr[] = {1,2,3,4,6,8,10,12,13};
 	int len = sizeof(arr)/sizeof(arr[0]);
-	LinkedList* ll = new LinkedList(arr, len);
+	LinkedList ll(arr, len);
 	cout<<"Original List:\n";
-	ll->printList();
+	ll.printList();
 
-	reverseList(ll);
+	reverseList(&ll);
 
 	cout<<"\n\nReversed List:\n";
-	ll->printList();
+	ll.printList();
+	// delete ll;
 	return 0;
 }

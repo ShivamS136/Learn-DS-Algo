@@ -15,7 +15,6 @@ public:
 class LinkedList{
 public:
     Node *head = NULL;
-    int length=0;
 	LinkedList(){};
 	LinkedList(int val){
 		this->addNode(val);
@@ -23,7 +22,7 @@ public:
 	LinkedList(int arr[], int len){
 		for(int i = 0; i < len; ++i)
 		{
-			this->addNode(arr[i], length);
+			this->addNode(arr[i], i);
 		}
 	}
 	~LinkedList(){
@@ -38,9 +37,8 @@ public:
 	void printList(){
 		Node *ptr = head;
 		int i=0;
-		cout<<"List Length:"<<length<<"\n";
 		while(ptr != NULL){
-			cout<<"\tindex: "<<i<<", data:"<<ptr->data<<", next:"<<ptr->next<<"\n";
+			cout<<"index: "<<i<<", data:"<<ptr->data<<", next:"<<ptr->next<<"\n";
 			i++;
 			ptr = ptr->next;
 		}
@@ -92,7 +90,6 @@ public:
 				firstPtr->next = newNode;
 			}
 		}
-		++length; 
 	}
 	int getData(int pos=0){
 		int retData;
@@ -176,7 +173,6 @@ public:
 			retData = tempNode->data;
 			delete tempNode;
 		}
-		--length;
 		return retData;
 	}
 };

@@ -8,14 +8,14 @@ using namespace std;
  *
  * @link      https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/#Method-2
  * @since     2020-04-25
- * @param     ll     LinkedList Class Object
- * @return    int    value of middle element
+ * @param     head     Node Class Object having head pointer of linked list
+ * @return    int      value of middle element
  */
-int getListMid(LinkedList* ll){
-	Node* slowPtr = ll->head;
-	Node* fastPtr = ll->head;
+int getListMid(Node* head){
+	Node* slowPtr = head;
+	Node* fastPtr = head;
 	int num;
-	if(ll->head != NULL){
+	if(head != NULL){
 		while(fastPtr!=NULL && fastPtr->next!=NULL){
 			fastPtr = fastPtr->next->next;
 			slowPtr = slowPtr->next;
@@ -29,13 +29,14 @@ int main()
 {
 	int arr[] = {1,2,3,4,6,8,10,12,13};
 	int len = sizeof(arr)/sizeof(arr[0]);
-	LinkedList* ll = new LinkedList(arr, len);
+	LinkedList ll(arr, len);
 
-	ll->printList();
+	ll.printList();
 
 	int mid;
-	mid = getListMid(ll);
+	mid = getListMid(ll.head);
 	cout<<"\n\nMiddle Element: "<<mid;
+	// delete ll;
 	return 0;
 }
 

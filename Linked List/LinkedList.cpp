@@ -39,7 +39,6 @@ public:
 class LinkedList{
 public:
     Node *head = NULL; // Node Pointer pointing head of the linked list
-    int length=0; // Length of the linked list
 
     /**
      * Default constructor
@@ -59,7 +58,7 @@ public:
 	LinkedList(int arr[], int len){
 		for(int i = 0; i < len; ++i)
 		{
-			this->addNode(arr[i], length);
+			this->addNode(arr[i], i);
 		}
 	}
 
@@ -80,15 +79,13 @@ public:
 
 	/**
 	 * This method print the complete linked list in below manner:
-	 *     List length: <length>
 	 *     index: <i>, data: <data>, next: <next>
 	 */
 	void printList(){
 		Node *ptr = head;
 		int i=0;
-		cout<<"List Length:"<<length<<"\n";
 		while(ptr != NULL){
-			cout<<"\tindex: "<<i<<", data:"<<ptr->data<<", next:"<<ptr->next<<"\n";
+			cout<<"index: "<<i<<", data:"<<ptr->data<<", next:"<<ptr->next<<"\n";
 			i++;
 			ptr = ptr->next;
 		}
@@ -108,7 +105,6 @@ public:
 			Node *newNode = new Node(val); // Create New Node
 			newNode->next = head; // Point this new node to head
 			head = newNode; // Make this new node the head of list
-			length++; // Increase length
 		}
 		else if(pos>0){ // At position from beginning
 			int tempPos = 0;
@@ -124,7 +120,6 @@ public:
 			Node* newNode = new Node(val); // Create new node
 			newNode->next = tempPtr->next; // Make new node pointing to next of current node
 			tempPtr->next = newNode; // Make current node pointing to new node
-			length++; // Increase length
 		}
 		else{
 			int tempPos = 0;
@@ -157,7 +152,6 @@ public:
 				newNode->next = firstPtr->next;
 				firstPtr->next = newNode;
 			}
-			length++; // Increase length
 		}
 	}
 
@@ -225,7 +219,6 @@ public:
 			retData = tempNode->data;
 			head = head->next;
 			delete tempNode;
-			--length;
 		}
 		else if(pos>0){
 			int tempPos = 0;
@@ -240,7 +233,6 @@ public:
 			Node* tempNode = tempPtr->next;
 			tempPtr->next = tempNode->next;
 			retData = tempNode->data;
-			--length;
 			delete tempNode;
 		}
 		else{
@@ -272,7 +264,6 @@ public:
 			}
 			retData = tempNode->data;
 			delete tempNode;
-			--length;
 		}
 		return retData;
 	}
