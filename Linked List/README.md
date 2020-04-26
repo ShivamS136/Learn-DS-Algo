@@ -1,19 +1,19 @@
 # Linked List
 In this folder we'll see implementation of Linked List using `C++` classes. Later programs are the algorithm problems based on Linked List. In the later programs header file is included for linked list.
 
-<!-- MarkdownTOC autolink="true"  -->
+<!-- MarkdownTOC autolink="true" -->
 
 - [What is Linked List?](#what-is-linked-list)
 - [Coding guide](#coding-guide)
 	- [Linked List specific](#linked-list-specific)
-			- [Empty Linked List:](#empty-linked-list)
-			- [Linked List with one node:](#linked-list-with-one-node)
-			- [Linked List with multiple values:](#linked-list-with-multiple-values)
+		- [Empty Linked List:](#empty-linked-list)
+		- [Linked List with one node:](#linked-list-with-one-node)
+		- [Linked List with multiple values:](#linked-list-with-multiple-values)
 	- [Linked List operations:](#linked-list-operations)
-			- [Add element:](#add-element)
-			- [Remove Node:](#remove-node)
-			- [Get data of a node situated at particular position:](#get-data-of-a-node-situated-at-particular-position)
-			- [Print complete list in output window:](#print-complete-list-in-output-window)
+		- [Add element:](#add-element)
+		- [Remove Node:](#remove-node)
+		- [Get data of a node situated at particular position:](#get-data-of-a-node-situated-at-particular-position)
+		- [Print complete list in output window:](#print-complete-list-in-output-window)
 - [Algorithms:](#algorithms)
 		- [Find middle element of a linked list](#find-middle-element-of-a-linked-list)
 		- [Reverse a linked list](#reverse-a-linked-list)
@@ -32,7 +32,7 @@ Linked list is a dynamic data structure in which we keep data in nodes and each 
 **File:** [LinkedList.cpp](LinkedList.cpp)  
 There are three ways to do that:
 
-##### Empty Linked List:
+#### Empty Linked List:
 
 ```cpp
   // This will create empty linked list with head=NULL
@@ -44,7 +44,7 @@ There are three ways to do that:
   LinkedList ll();
 ```
 
-##### Linked List with one node:
+#### Linked List with one node:
 
 ```cpp
   // This will create linked with a single node having data=2, next=NULL and head pointing this node
@@ -53,7 +53,7 @@ There are three ways to do that:
   // ll=2->NULL
  ```
 
-##### Linked List with multiple values:
+#### Linked List with multiple values:
 
 ```cpp
   // This will create Linked list with 6 nodes with data and order same as the array provided
@@ -69,7 +69,7 @@ There are three ways to do that:
 ---
 
 ### Linked List operations:
-##### Add element:
+#### Add element:
 
 ```cpp
   LinkedList ll = new LinkedList(1);
@@ -85,7 +85,7 @@ There are three ways to do that:
   // ll=2->5->10->1->NULL
 ```
 
-##### Remove Node:
+#### Remove Node:
 
 ```cpp
    int arr[] = {0,1,2,3,4,5,6,7};
@@ -105,7 +105,7 @@ There are three ways to do that:
    // dt=6, ll=1->3->4->5->7->NULL
 ```
 
-##### Get data of a node situated at particular position:
+#### Get data of a node situated at particular position:
 
 ```cpp
   int arr[] = {0,1,2,3,4,5,6,7};
@@ -125,7 +125,7 @@ There are three ways to do that:
 
 > In the above three methods if you choose a position out of bind then position will be considered as head if position<0 and tail if position>0
 
-##### Print complete list in output window:
+#### Print complete list in output window:
 
 ```cpp
   int arr[] = {2,4,6};
