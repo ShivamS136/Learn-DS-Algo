@@ -15,10 +15,10 @@ In this folder we'll see implementation of Linked List using `C++` classes. Late
 		- [Get data of a node situated at particular position:](#get-data-of-a-node-situated-at-particular-position)
 		- [Print complete list in output window:](#print-complete-list-in-output-window)
 - [Algorithms:](#algorithms)
-		- [Find middle element of a linked list](#find-middle-element-of-a-linked-list)
-		- [Reverse a linked list](#reverse-a-linked-list)
-		- [Find length of loop in a linked list](#find-length-of-loop-in-a-linked-list)
-		- [Merge two sorted linked lists](#merge-two-sorted-linked-lists)
+	- [Find middle element of a linked list](#find-middle-element-of-a-linked-list)
+	- [Reverse a linked list](#reverse-a-linked-list)
+	- [Find length of loop in a linked list](#find-length-of-loop-in-a-linked-list)
+	- [Merge two sorted linked lists](#merge-two-sorted-linked-lists)
 
 <!-- /MarkdownTOC -->
 
@@ -146,23 +146,23 @@ There are three ways to do that:
 
 ## Algorithms:
 
-#### Find middle element of a linked list
+### Find middle element of a linked list
 * **File:** [findMiddle.cpp](findMiddle.cpp)
 * **Complexity:** *Time:* O(n/2) = O(n), *Space:* O(1)
 * **Reference:** [GFG: Find the middle of a given linked list in C and Java (Method 2)](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/) 
 
-#### Reverse a linked list
+### Reverse a linked list
 * **File:** [reverseList.cpp](reverseList.cpp)
 * **Complexity:** *Time:* O(n), *Space:* O(1)
 * **Reference:** [GFG: Reverse a linked list (Iterative Method)](https://www.geeksforgeeks.org/reverse-a-linked-list/) 
 
-#### Find length of loop in a linked list
+### Find length of loop in a linked list
 * **File:** [findLoopLength.cpp](findLoopLength.cpp)
 * **Complexity:** *Time:* O(n), *Space:* O(1)
 * **Reference 1:** [Floyd's cycle-finding algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_Tortoise_and_Hare) 
 * **Reference 2:** [GFG: Detect loop in a linked list](https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/)
 
-#### Merge two sorted linked lists
+### Merge two sorted linked lists
 * **File:** [sortedMerge.cpp](sortedMerge.cpp)
 * **Complexity:** *Time:* O(m+n), *Space:* O(1)
 * **Reference:** [GFG: Merge two sorted linked lists (Method 2 & 3)](https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/) 
