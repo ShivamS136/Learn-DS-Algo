@@ -4,6 +4,7 @@ I created this repo for practicing my `C++` skills and creating a code for the m
 
 ## Topics covered:
 * [Linked List](Linked%20List)
+* [Algorithm based problems](Algo)
 
 ## Author
 * [Shivam Sharma](https://github.com/ShivamS136/)
