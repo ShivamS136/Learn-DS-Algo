@@ -1,6 +1,17 @@
 # Algorithms
 In this folder we'll see implementation of many important algorithmic problems using `C++`.
 
+<!-- MarkdownTOC autolink="true" -->
+
+- [List of problems:](#list-of-problems)
+  - [Coin Change Problem: Find minimum number of coins that make a given value](#coin-change-problem-find-minimum-number-of-coins-that-make-a-given-value)
+  - [Paranthesis checker](#paranthesis-checker)
+  - [Print next larger element in array](#print-next-larger-element-in-array)
+  - [Count and Say sequence](#count-and-say-sequence)
+
+<!-- /MarkdownTOC -->
+
+
 ## List of problems:
 
 ### Coin Change Problem: Find minimum number of coins that make a given value
