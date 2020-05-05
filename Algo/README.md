@@ -4,13 +4,14 @@ In this folder we'll see implementation of many important algorithmic problems u
 <!-- MarkdownTOC autolink="true" -->
 
 - [List of problems:](#list-of-problems)
-  - [LeetCode: May Challenge:](#leetcode-may-challenge)
-    - [Ransom Note Problem: Check if Ransom Note is generatable from magazine](#ransom-note-problem-check-if-ransom-note-is-generatable-from-magazine)
-  - [Miscellaneous:](#miscellaneous)
-    - [Coin Change Problem: Find minimum number of coins that make a given value](#coin-change-problem-find-minimum-number-of-coins-that-make-a-given-value)
-    - [Paranthesis checker](#paranthesis-checker)
-    - [Print next larger element in array](#print-next-larger-element-in-array)
-    - [Count and Say sequence](#count-and-say-sequence)
+	- [LeetCode: May Challenge:](#leetcode-may-challenge)
+		- [Ransom Note Problem: Check if Ransom Note is generatable from magazine](#ransom-note-problem-check-if-ransom-note-is-generatable-from-magazine)
+		- [Find index of first Unique Character in a String](#find-index-of-first-unique-character-in-a-string)
+	- [Miscellaneous:](#miscellaneous)
+		- [Coin Change Problem: Find minimum number of coins that make a given value](#coin-change-problem-find-minimum-number-of-coins-that-make-a-given-value)
+		- [Paranthesis checker](#paranthesis-checker)
+		- [Print next larger element in array](#print-next-larger-element-in-array)
+		- [Count and Say sequence](#count-and-say-sequence)
 
 <!-- /MarkdownTOC -->
 
@@ -22,7 +23,12 @@ In this folder we'll see implementation of many important algorithmic problems u
 #### Ransom Note Problem: Check if Ransom Note is generatable from magazine
 * **File:** [ransomNote.cpp](ransomNote.cpp)
 * **Complexity:** *Time:* O(m+n), *Space:* O(m)
-* **Reference:** [Leetcode: Ransome Note](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3318/) 
+* **Reference:** [Leetcode: Ransome Note](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3318/)
+
+#### Find index of first Unique Character in a String
+* **File:** [firstUniqChar.cpp](firstUniqChar.cpp)
+* **Complexity:** *Time:* O(n), *Space:* O(n)
+* **Reference:** [First Unique Character in a String](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3320/) 
 
 
 ### Miscellaneous:
