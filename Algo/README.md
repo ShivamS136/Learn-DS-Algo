@@ -5,8 +5,11 @@ In this folder we'll see implementation of many important algorithmic problems u
 
 - [List of problems:](#list-of-problems)
 	- [LeetCode: May Challenge:](#leetcode-may-challenge)
-		- [Ransom Note Problem: Check if Ransom Note is generatable from magazine](#ransom-note-problem-check-if-ransom-note-is-generatable-from-magazine)
-		- [Find index of first Unique Character in a String](#find-index-of-first-unique-character-in-a-string)
+		- [May 1: Find first bad version went on production](#may-1-find-first-bad-version-went-on-production)
+		- [May 3: Ransom Note Problem: Check if Ransom Note is generatable from magazine](#may-3-ransom-note-problem-check-if-ransom-note-is-generatable-from-magazine)
+		- [May 5: Find index of first Unique Character in a String](#may-5-find-index-of-first-unique-character-in-a-string)
+		- [May 7: Check if values are cousins in Binary Tree](#may-7-check-if-values-are-cousins-in-binary-tree)
+		- [May 8: Check if given points are colinear \(Make a straight line\)](#may-8-check-if-given-points-are-colinear-make-a-straight-line)
 	- [Miscellaneous:](#miscellaneous)
 		- [Coin Change Problem: Find minimum number of coins that make a given value](#coin-change-problem-find-minimum-number-of-coins-that-make-a-given-value)
 		- [Paranthesis checker](#paranthesis-checker)
@@ -20,16 +23,31 @@ In this folder we'll see implementation of many important algorithmic problems u
 
 ### LeetCode: May Challenge:
 
-#### Ransom Note Problem: Check if Ransom Note is generatable from magazine
+#### May 1: Find first bad version went on production
+* **File:** [firstBadVersion.cpp](firstBadVersion.cpp)
+* **Complexity:** *Time:* O(logn), *Space:* O(1)
+* **Reference:** [Leetcode: First Bad Version](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3316/)
+
+#### May 3: Ransom Note Problem: Check if Ransom Note is generatable from magazine
 * **File:** [ransomNote.cpp](ransomNote.cpp)
 * **Complexity:** *Time:* O(m+n), *Space:* O(m)
 * **Reference:** [Leetcode: Ransome Note](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3318/)
 
-#### Find index of first Unique Character in a String
+#### May 5: Find index of first Unique Character in a String
 * **File:** [firstUniqChar.cpp](firstUniqChar.cpp)
 * **Complexity:** *Time:* O(n), *Space:* O(n)
 * **Reference:** [First Unique Character in a String](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3320/) 
 
+#### May 7: Check if values are cousins in Binary Tree
+* **File:** [checkTreeCousins.cpp](checkTreeCousins.cpp)
+* **Complexity:** *Time:* O(n), *Space:* O(1)
+* **Reference:** [Cousins in Binary Tree](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3322/) 
+
+#### May 8: Check if given points are colinear (Make a straight line)
+* **File:** [checkPointsColinear.cpp](checkPointsColinear.cpp)
+* **Complexity:** *Time:* O(n), *Space:* O(1)
+* **Reference:** [Check If It Is a Straight Line](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/) 
+* **Reference:** [Formula used: All points on same line has same slope](https://stackoverflow.com/a/3813723/8494462) 
 
 ### Miscellaneous:
 
