@@ -10,6 +10,7 @@ In this folder we'll see implementation of many important algorithmic problems u
 		- [May 5: Find index of first Unique Character in a String](#may-5-find-index-of-first-unique-character-in-a-string)
 		- [May 7: Check if values are cousins in Binary Tree](#may-7-check-if-values-are-cousins-in-binary-tree)
 		- [May 8: Check if given points are colinear \(Make a straight line\)](#may-8-check-if-given-points-are-colinear-make-a-straight-line)
+		- [May 9: Check if given number is a valid square\(Without using `sqrt`\)](#may-9-check-if-given-number-is-a-valid-squarewithout-using-sqrt)
 	- [Codechef:](#codechef)
 		- [Find minimum bombs to blast N 1-D kingdoms](#find-minimum-bombs-to-blast-n-1-d-kingdoms)
 	- [Miscellaneous:](#miscellaneous)
@@ -49,7 +50,14 @@ In this folder we'll see implementation of many important algorithmic problems u
 * **File:** [checkPointsColinear.cpp](checkPointsColinear.cpp)
 * **Complexity:** *Time:* O(n), *Space:* O(1)
 * **Reference:** [Check If It Is a Straight Line](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3323/) 
-* **Reference:** [Formula used: All points on same line has same slope](https://stackoverflow.com/a/3813723/8494462) 
+* **Reference:** [Formula used: All points on same line has same slope](https://stackoverflow.com/a/3813723/8494462)  
+
+#### May 9: Check if given number is a valid square(Without using `sqrt`)
+* **File:** [validSquare.cpp](validSquare.cpp)
+* **Complexity:** *Time:* O(log n), *Space:* O(1)
+* **Reference:** [Valid Perfect Square
+](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3324/)
+
 
 
 ### Codechef:
