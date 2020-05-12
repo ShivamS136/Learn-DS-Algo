@@ -12,6 +12,7 @@ In this folder we'll see implementation of many important algorithmic problems u
 		- [May 8: Check if given points are colinear \(Make a straight line\)](#may-8-check-if-given-points-are-colinear-make-a-straight-line)
 		- [May 9: Check if given number is a valid square\(Without using `sqrt`\)](#may-9-check-if-given-number-is-a-valid-squarewithout-using-sqrt)
 		- [May 11: Flood Fill image](#may-11-flood-fill-image)
+		- [May 12: Find element occuring only once in a sorted array while others are occuring twice](#may-12-find-element-occuring-only-once-in-a-sorted-array-while-others-are-occuring-twice)
 	- [Codechef:](#codechef)
 		- [Find minimum bombs to blast N 1-D kingdoms](#find-minimum-bombs-to-blast-n-1-d-kingdoms)
 	- [Miscellaneous:](#miscellaneous)
@@ -64,6 +65,10 @@ In this folder we'll see implementation of many important algorithmic problems u
 * **Reference:** [Flood Fill](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3326/)
 * **Reference:** [Wiki: Flood Fill](https://en.wikipedia.org/wiki/Flood_fill)
 
+#### May 12: Find element occuring only once in a sorted array while others are occuring twice
+* **File:** [onceInSortedArr.cpp](onceInSortedArr.cpp)
+* **Complexity:** *Time:* O(log n), *Space:* O(1)
+* **Reference:** [Single Element in a Sorted Array](https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/)
 
 ### Codechef:
 
