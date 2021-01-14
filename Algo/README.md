@@ -20,6 +20,7 @@ In this folder we'll see implementation of many important algorithmic problems u
 		- [Paranthesis checker](#paranthesis-checker)
 		- [Print next larger element in array](#print-next-larger-element-in-array)
 		- [Count and Say sequence](#count-and-say-sequence)
+		- [Minimum Operations to Reduce X to Zero](#minimum-operations-to-reduce-x-to-zero)
 
 <!-- /MarkdownTOC -->
 
@@ -100,4 +101,11 @@ In this folder we'll see implementation of many important algorithmic problems u
 * **File:** [countAndSay.cpp](countAndSay.cpp)
 * **Complexity:** *Time:* O(n), *Space:* O(1)
 * **Reference:** [GFG: Look-and-Say Sequence](https://www.geeksforgeeks.org/look-and-say-sequence/)
+
+#### Minimum Operations to Reduce X to Zero
+* **File:** Naive DP Solution: [reduceXToZero_NaiveDP.cpp](reduceXToZero_NaiveDP.cpp)
+* **Complexity:** *Time:* O(2^(10^5)), *Space:* O(2 * 10^5)
+* **File:** [reduceXToZero.cpp](reduceXToZero.cpp)
+* **Complexity:** *Time:* O(n), *Space:* O(1)
+* **Reference:** [Leetcode: Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero)
 
